@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
+    </head>
+    <body>
+        <div  id="d1"></div>
+        
+        <script type="text/babel">
+          var Abc=function(){
+          var [x,setX]=React.useState([
+            "https://i.pinimg.com/236x/42/d3/a5/42d3a5fb0d65d9c3fcbc3e06ced16646.jpg",
+            "https://i.pinimg.com/736x/67/c7/65/67c7654404a23490a07e17fd67ed5cc7.jpg",
+            "https://img.freepik.com/free-photo/girl-praying_1450-184.jpg"
+          ])
+             return <div>
+                <div>{
+                x.map(function(s){
+                    return <img src={s} width="30%"/>
+                  
+                })
+            }
+         
+                    
+                    </div>
+                
+                </div>
+
+
+          }
+              ReactDOM.render(<Abc ></Abc>,document.getElementById("d1"))
+        </script>
+    </body>
+    </html>
